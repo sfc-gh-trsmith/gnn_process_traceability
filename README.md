@@ -76,9 +76,17 @@ gnn_process_traceability/
 │       ├── process_parameters.csv
 │       ├── stations.csv
 │       └── defects.csv
+├── docs/
+│   └── TEST_PLAN.md                  # Comprehensive test plan
 ├── notebooks/
 │   ├── gnn_traceability.ipynb        # GNN analysis notebook
-│   └── environment.yml               # Notebook dependencies
+│   ├── environment.yml               # Notebook dependencies
+│   └── snowflake.yml                 # Notebook deployment config
+├── solution_presentation/
+│   ├── GNN_Quality_Traceability_Overview.md
+│   ├── GNN_Quality_Traceability_Overview.pdf
+│   ├── generate_images.py            # Image generator for presentation
+│   └── images/                       # Presentation images
 ├── sql/
 │   ├── 01_account_setup.sql          # Role, database, warehouse, compute pool
 │   └── 02_schema_setup.sql           # Tables, stages, views
@@ -87,14 +95,22 @@ gnn_process_traceability/
 │   ├── environment.yml               # Streamlit dependencies
 │   ├── streamlit_app.py              # Main app entry
 │   ├── pages/                        # Dashboard pages
+│   │   ├── 1_Process_Network.py
+│   │   ├── 2_Defect_Tracing.py
+│   │   ├── 3_Risk_Analysis.py
+│   │   └── 4_About.py
 │   └── utils/                        # Utility modules
+│       ├── ai_insights.py
+│       ├── data_loader.py
+│       ├── database.py
+│       └── visualizations.py
 ├── utils/
 │   ├── generate_synthetic_data.py    # Data generator (dev use only)
 │   └── validate_notebook.py          # Notebook cell name validator
 ├── deploy.sh                         # One-time deployment
 ├── run.sh                            # Runtime operations
 ├── clean.sh                          # Cleanup script
-├── ci_test_cycle.sh                  # CI/CD automated test
+├── create_user.sh                    # Create demo users with access
 ├── DRD.md                            # Design requirements document
 └── README.md                         # This file
 ```
@@ -143,17 +159,69 @@ gnn_process_traceability/
 ## Deployment Options
 
 ```bash
-# Deploy with environment prefix (for multi-environment)
-./deploy.sh --prefix DEV
+# Full deployment
+./deploy.sh
 
 # Use different connection
 ./deploy.sh -c prod
 
-# Deploy only Streamlit (for faster iteration)
-./deploy.sh --only-streamlit
+# Deploy with environment prefix (for multi-environment)
+./deploy.sh --prefix DEV
+
+# Deploy only SQL setup
+./deploy.sh --only-sql
 
 # Deploy only data
 ./deploy.sh --only-data
+
+# Deploy only notebook
+./deploy.sh --only-notebook
+
+# Deploy only Streamlit (for faster iteration)
+./deploy.sh --only-streamlit
+
+# Skip notebook deployment (useful if compute pool is unavailable)
+./deploy.sh --skip-notebook
+```
+
+## Runtime Operations
+
+```bash
+# Execute GNN analysis notebook
+./run.sh main
+
+# Check resource status and table counts
+./run.sh status
+
+# Get notebook URL
+./run.sh notebook
+
+# Get Streamlit app URL
+./run.sh streamlit
+
+# Use different connection
+./run.sh -c prod main
+```
+
+## Creating Demo Users
+
+To create additional users with access to the demo:
+
+```bash
+# Create user with password
+./create_user.sh -u demo_user -p TempPass123!
+
+# Create user with specific connection
+./create_user.sh -u demo_user -c prod -p TempPass123!
+
+# Use environment prefix (matches deploy.sh --prefix option)
+./create_user.sh -u demo_user --prefix DEV -p TempPass123!
+
+# Show inferred configuration
+./create_user.sh --show-config
+
+# Dry run to preview SQL
+./create_user.sh -u test_user --dry-run
 ```
 
 ## Technology Stack
@@ -166,6 +234,8 @@ gnn_process_traceability/
 ## Documentation
 
 - [DRD.md](DRD.md) - Complete design requirements document
+- [docs/TEST_PLAN.md](docs/TEST_PLAN.md) - Comprehensive test plan with validation steps
+- [solution_presentation/](solution_presentation/) - Presentation materials and overview PDF
 - [.cursor/rules](.cursor/rules) - Project standards and conventions
 - [.cursor/SNOWFLAKE_NOTEBOOK_GUIDELINES.md](.cursor/SNOWFLAKE_NOTEBOOK_GUIDELINES.md) - Notebook development guide
 - [.cursor/SNOWFLAKE_STREAMLIT_GUIDELINES.md](.cursor/SNOWFLAKE_STREAMLIT_GUIDELINES.md) - Streamlit development guide
@@ -199,6 +269,28 @@ snow connection list
 
 # Redeploy only notebook
 ./deploy.sh --only-notebook
+
+# Reload data
+./deploy.sh --only-data
+```
+
+### Debug Commands
+
+```bash
+# Check compute pool status
+snow sql -q "SHOW COMPUTE POOLS LIKE 'GNN_PROCESS_TRACEABILITY%';"
+
+# Check notebook status
+snow sql -q "
+    USE DATABASE GNN_PROCESS_TRACEABILITY;
+    SHOW NOTEBOOKS LIKE 'GNN_PROCESS_TRACEABILITY%';
+"
+
+# Check Streamlit app status
+snow sql -q "
+    USE DATABASE GNN_PROCESS_TRACEABILITY;
+    SHOW STREAMLITS LIKE 'GNN_PROCESS_TRACEABILITY%';
+"
 ```
 
 ## License

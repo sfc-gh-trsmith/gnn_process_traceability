@@ -73,3 +73,4 @@ cursor_scratch/
 .cursor/
 docs/TEST_PLAN.md
 utils
+create_user.sh
