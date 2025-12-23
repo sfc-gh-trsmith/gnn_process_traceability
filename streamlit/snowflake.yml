@@ -1,0 +1,15 @@
+definition_version: "2"
+entities:
+  gnn_process_traceability_app:
+    type: streamlit
+    identifier:
+      name: GNN_PROCESS_TRACEABILITY_APP
+    main_file: streamlit_app.py
+    pages_dir: pages/
+    query_warehouse: GNN_PROCESS_TRACEABILITY_WH
+    artifacts:
+      - streamlit_app.py
+      - pages/
+      - utils/
+      - environment.yml
+

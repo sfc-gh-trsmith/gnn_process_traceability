@@ -1,0 +1,16 @@
+STATION_ID,NAME,TYPE,LINE,CAPACITY,LAST_MAINTENANCE
+STN-MC1,CNC Machining Center 1,machining,Line 1,12,2024-10-15
+STN-MC2,CNC Machining Center 2,machining,Line 2,10,2024-09-28
+STN-MC3,CNC Machining Center 3,machining,Line 3,11,2024-11-10
+STN-WD1,Robotic Welding Cell 1,welding,Line 1,8,2024-11-01
+STN-WD2,Robotic Welding Cell 2,welding,Line 2,8,2024-10-18
+STN-HT1,Heat Treatment Line 1,heat_treatment,Line 1,15,2024-10-20
+STN-HT2,Heat Treatment Line 2,heat_treatment,Line 2,15,2024-10-22
+STN-HT3,Heat Treatment Line 3,heat_treatment,Line 3,15,2024-08-15
+STN-PT1,Paint/Coating Booth 1,coating,Line 1,10,2024-09-15
+STN-PT2,Paint/Coating Booth 2,coating,Line 2,10,2024-10-05
+STN-SA1,Sub-Assembly Station 1,sub_assembly,Line 1,8,2024-11-12
+STN-SA2,Sub-Assembly Station 2,sub_assembly,Line 2,8,2024-10-28
+STN-AS1,Final Assembly Station 1,assembly,Line 1,6,2024-11-05
+STN-AS2,Final Assembly Station 2,assembly,Line 2,6,2024-10-25
+STN-QC1,Quality Control Bay,testing,Common,20,2024-10-30

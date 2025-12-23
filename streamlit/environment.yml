@@ -1,0 +1,9 @@
+name: streamlit_env
+channels:
+  - snowflake
+dependencies:
+  - pandas
+  - numpy
+  - plotly
+  - networkx
+

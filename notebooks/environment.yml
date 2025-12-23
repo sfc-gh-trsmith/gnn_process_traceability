@@ -1,0 +1,11 @@
+name: gnn_traceability_env
+channels:
+  - snowflake
+dependencies:
+  - pandas
+  - numpy
+  - scipy
+  - matplotlib
+  - seaborn
+  - networkx
+

@@ -1,0 +1,163 @@
+DEFECT_ID,WORK_ORDER_ID,DEFECT_TYPE,SEVERITY,DETECTION_DATE,DETECTION_STAGE,DESCRIPTION,ROOT_CAUSE
+DEF-0001,WO-00018,material_fatigue,critical,2024-06-23,field_return,Material Fatigue detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0002,WO-00085,cylinder_scoring,major,2022-04-26,final_inspection,Cylinder Scoring detected during final inspection. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0003,WO-00145,hydraulic_seal_failure,major,2024-07-14,field_return,Hydraulic Seal Failure detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0004,WO-00243,material_fatigue,critical,2020-09-07,final_inspection,Material Fatigue detected during final inspection. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0005,WO-00255,dimensional_variance,major,2021-12-16,final_inspection,Dimensional Variance detected during final inspection,
+DEF-0006,WO-00303,cylinder_scoring,critical,2021-07-03,field_return,Cylinder Scoring detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0007,WO-00306,material_fatigue,major,2022-11-19,field_return,Material Fatigue detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0008,WO-00339,stress_fracture,major,2021-01-20,field_return,Stress Fracture detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0009,WO-00384,cylinder_scoring,major,2024-12-20,final_inspection,Cylinder Scoring detected during final inspection. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0010,WO-00496,coating_adhesion,minor,2024-08-31,final_inspection,Coating Adhesion detected during final inspection,
+DEF-0011,WO-00500,premature_wear,major,2022-09-29,field_return,Premature Wear detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0012,WO-00567,hydraulic_seal_failure,critical,2025-03-01,final_inspection,Hydraulic Seal Failure detected during final inspection. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0013,WO-00588,surface_finish,major,2024-07-13,in_process,Surface Finish detected during in process,
+DEF-0014,WO-00628,material_fatigue,major,2020-11-25,field_return,Material Fatigue detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0015,WO-00647,hydraulic_seal_failure,major,2025-02-25,final_inspection,Hydraulic Seal Failure detected during final inspection. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0016,WO-00654,material_fatigue,major,2023-11-22,field_return,Material Fatigue detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0017,WO-00674,hydraulic_seal_failure,major,2022-03-20,field_return,Hydraulic Seal Failure detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0018,WO-00697,cylinder_scoring,critical,2021-01-06,field_return,Cylinder Scoring detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0019,WO-00742,stress_fracture,major,2021-03-19,final_inspection,Stress Fracture detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0020,WO-00806,surface_contamination,critical,2023-08-05,in_process,Surface Contamination detected during in process,
+DEF-0021,WO-00844,cylinder_scoring,major,2022-03-12,field_return,Cylinder Scoring detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0022,WO-00855,material_fatigue,critical,2023-06-11,final_inspection,Material Fatigue detected during final inspection. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0023,WO-00871,material_fatigue,major,2025-02-05,final_inspection,Material Fatigue detected during final inspection. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0024,WO-00916,material_fatigue,major,2024-05-02,field_return,Material Fatigue detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0025,WO-00918,hardness_deviation,major,2021-09-29,field_return,Hardness Deviation detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0026,WO-00985,cylinder_scoring,major,2020-09-16,final_inspection,Cylinder Scoring detected during final inspection. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0027,WO-01039,hardness_deviation,critical,2021-03-06,final_inspection,Hardness Deviation detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0028,WO-01066,hardness_deviation,critical,2023-02-02,field_return,Hardness Deviation detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0029,WO-01114,premature_wear,major,2020-08-25,final_inspection,Premature Wear detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0030,WO-01162,premature_wear,major,2025-01-03,final_inspection,Premature Wear detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0031,WO-01167,cylinder_scoring,major,2024-06-30,field_return,Cylinder Scoring detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0032,WO-01189,premature_wear,major,2022-11-06,field_return,Premature Wear detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0033,WO-01192,surface_finish,major,2023-03-08,final_inspection,Surface Finish detected during final inspection,
+DEF-0034,WO-01245,coating_thickness,critical,2020-04-04,in_process,Coating Thickness detected during in process,
+DEF-0035,WO-01270,stress_fracture,major,2023-04-11,final_inspection,Stress Fracture detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0036,WO-01298,stress_fracture,major,2023-03-20,final_inspection,Stress Fracture detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0037,WO-01353,coating_thickness,major,2023-02-22,field_return,Coating Thickness detected during field return,
+DEF-0038,WO-01358,cylinder_scoring,critical,2023-01-20,final_inspection,Cylinder Scoring detected during final inspection. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0039,WO-01359,hydraulic_seal_failure,critical,2021-01-25,field_return,Hydraulic Seal Failure detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0040,WO-01441,coating_adhesion,minor,2022-03-10,final_inspection,Coating Adhesion detected during final inspection,
+DEF-0041,WO-01460,hardness_deviation,critical,2024-11-09,field_return,Hardness Deviation detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0042,WO-01483,stress_fracture,critical,2022-11-18,final_inspection,Stress Fracture detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0043,WO-01496,hardness_deviation,critical,2022-05-03,field_return,Hardness Deviation detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0044,WO-01506,cylinder_scoring,major,2024-01-10,field_return,Cylinder Scoring detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0045,WO-01543,cylinder_scoring,critical,2024-02-14,field_return,Cylinder Scoring detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0046,WO-01588,material_fatigue,major,2022-08-01,final_inspection,Material Fatigue detected during final inspection. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0047,WO-01648,weld_porosity,major,2024-01-29,field_return,Weld Porosity detected during field return,
+DEF-0048,WO-01698,material_fatigue,major,2023-10-06,field_return,Material Fatigue detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0049,WO-01714,stress_fracture,major,2024-05-13,final_inspection,Stress Fracture detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0050,WO-01730,dimensional_variance,critical,2022-11-29,final_inspection,Dimensional Variance detected during final inspection,
+DEF-0051,WO-01826,premature_wear,major,2023-04-12,final_inspection,Premature Wear detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0052,WO-01834,cylinder_scoring,major,2024-05-24,field_return,Cylinder Scoring detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0053,WO-01850,stress_fracture,major,2020-08-01,field_return,Stress Fracture detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0054,WO-01866,premature_wear,major,2022-05-25,final_inspection,Premature Wear detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0055,WO-01906,surface_finish,major,2024-11-09,final_inspection,Surface Finish detected during final inspection,
+DEF-0056,WO-01956,cylinder_scoring,major,2020-11-27,field_return,Cylinder Scoring detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0057,WO-01993,surface_contamination,critical,2024-11-02,field_return,Surface Contamination detected during field return,
+DEF-0058,WO-01998,surface_contamination,minor,2022-05-20,final_inspection,Surface Contamination detected during final inspection,
+DEF-0059,WO-02057,coating_thickness,major,2022-04-23,in_process,Coating Thickness detected during in process,
+DEF-0060,WO-02101,cylinder_scoring,major,2022-10-27,field_return,Cylinder Scoring detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0061,WO-02122,coating_adhesion,critical,2023-05-02,in_process,Coating Adhesion detected during in process,
+DEF-0062,WO-02142,premature_wear,critical,2022-03-03,final_inspection,Premature Wear detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0063,WO-02230,hydraulic_seal_failure,critical,2020-09-05,final_inspection,Hydraulic Seal Failure detected during final inspection. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0064,WO-02244,hydraulic_seal_failure,major,2021-10-04,field_return,Hydraulic Seal Failure detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0065,WO-02257,coating_thickness,critical,2022-05-11,final_inspection,Coating Thickness detected during final inspection,
+DEF-0066,WO-02308,material_fatigue,major,2024-11-01,field_return,Material Fatigue detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0067,WO-02333,stress_fracture,critical,2021-03-15,final_inspection,Stress Fracture detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0068,WO-02337,material_fatigue,major,2023-05-16,field_return,Material Fatigue detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0069,WO-02346,stress_fracture,major,2020-10-07,field_return,Stress Fracture detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0070,WO-02369,paint_adhesion_failure,major,2022-01-31,in_process,Paint Adhesion Failure detected during in process,
+DEF-0071,WO-02390,weld_porosity,critical,2023-05-28,field_return,Weld Porosity detected during field return,
+DEF-0072,WO-02442,paint_adhesion_failure,critical,2024-02-01,field_return,Paint Adhesion Failure detected during field return,
+DEF-0073,WO-02554,hardness_deviation,major,2022-07-05,field_return,Hardness Deviation detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0074,WO-02874,stress_fracture,major,2023-05-27,final_inspection,Stress Fracture detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0075,WO-02897,cylinder_scoring,critical,2021-09-11,field_return,Cylinder Scoring detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0076,WO-02916,hydraulic_seal_failure,major,2020-09-28,final_inspection,Hydraulic Seal Failure detected during final inspection. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0077,WO-02945,stress_fracture,critical,2025-01-09,field_return,Stress Fracture detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0078,WO-03001,dimensional_variance,critical,2022-12-09,field_return,Dimensional Variance detected during field return,
+DEF-0079,WO-03009,hardness_deviation,major,2020-11-09,field_return,Hardness Deviation detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0080,WO-03043,material_fatigue,critical,2021-07-04,field_return,Material Fatigue detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0081,WO-03088,material_fatigue,critical,2021-06-13,final_inspection,Material Fatigue detected during final inspection. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0082,WO-03293,cylinder_scoring,critical,2022-04-15,field_return,Cylinder Scoring detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0083,WO-03322,hardness_deviation,major,2021-07-24,final_inspection,Hardness Deviation detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0084,WO-03351,material_fatigue,critical,2022-11-14,field_return,Material Fatigue detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0085,WO-03361,hardness_deviation,major,2024-08-13,field_return,Hardness Deviation detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0086,WO-03406,cylinder_scoring,critical,2021-11-09,field_return,Cylinder Scoring detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0087,WO-03416,material_fatigue,major,2023-12-30,field_return,Material Fatigue detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0088,WO-03468,hydraulic_seal_failure,critical,2021-08-08,field_return,Hydraulic Seal Failure detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0089,WO-03596,hydraulic_seal_failure,major,2022-09-14,field_return,Hydraulic Seal Failure detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0090,WO-03601,stress_fracture,major,2022-11-16,final_inspection,Stress Fracture detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0091,WO-03641,cylinder_scoring,critical,2021-09-09,field_return,Cylinder Scoring detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0092,WO-03788,premature_wear,major,2024-11-01,field_return,Premature Wear detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0093,WO-03856,hydraulic_seal_failure,major,2020-10-16,field_return,Hydraulic Seal Failure detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0094,WO-03878,stress_fracture,major,2020-03-01,field_return,Stress Fracture detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0095,WO-03895,stress_fracture,major,2022-05-09,field_return,Stress Fracture detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0096,WO-03918,material_fatigue,critical,2020-04-24,final_inspection,Material Fatigue detected during final inspection. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0097,WO-04050,cylinder_scoring,major,2022-12-15,final_inspection,Cylinder Scoring detected during final inspection. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0098,WO-04109,material_fatigue,major,2024-08-19,field_return,Material Fatigue detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0099,WO-04140,stress_fracture,major,2024-12-04,final_inspection,Stress Fracture detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0100,WO-04164,material_fatigue,major,2021-10-24,field_return,Material Fatigue detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0101,WO-04165,dimensional_variance,minor,2021-05-06,final_inspection,Dimensional Variance detected during final inspection,
+DEF-0102,WO-04253,hardness_deviation,major,2022-07-31,final_inspection,Hardness Deviation detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0103,WO-04318,material_fatigue,major,2020-10-25,field_return,Material Fatigue detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0104,WO-04320,cylinder_scoring,major,2021-12-14,final_inspection,Cylinder Scoring detected during final inspection. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0105,WO-04374,stress_fracture,critical,2021-04-27,final_inspection,Stress Fracture detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0106,WO-04423,material_fatigue,major,2023-07-30,field_return,Material Fatigue detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0107,WO-04450,cylinder_scoring,critical,2020-11-23,field_return,Cylinder Scoring detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0108,WO-04461,hardness_deviation,major,2023-08-22,final_inspection,Hardness Deviation detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0109,WO-04551,hardness_deviation,major,2023-04-13,field_return,Hardness Deviation detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0110,WO-04596,hydraulic_seal_failure,major,2022-07-15,field_return,Hydraulic Seal Failure detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0111,WO-04605,cylinder_scoring,major,2023-12-29,final_inspection,Cylinder Scoring detected during final inspection. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0112,WO-04664,hydraulic_seal_failure,major,2020-03-27,field_return,Hydraulic Seal Failure detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0113,WO-04687,paint_adhesion_failure,critical,2021-10-03,in_process,Paint Adhesion Failure detected during in process,
+DEF-0114,WO-04696,cylinder_scoring,major,2021-06-29,field_return,Cylinder Scoring detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0115,WO-04710,coating_thickness,critical,2024-07-20,field_return,Coating Thickness detected during field return,
+DEF-0116,WO-04871,hardness_deviation,critical,2020-09-26,final_inspection,Hardness Deviation detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0117,WO-04885,cylinder_scoring,major,2020-11-30,field_return,Cylinder Scoring detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0118,WO-04907,hardness_deviation,critical,2024-12-12,field_return,Hardness Deviation detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0119,WO-04917,premature_wear,critical,2022-05-28,field_return,Premature Wear detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0120,WO-05009,hydraulic_seal_failure,critical,2020-09-24,final_inspection,Hydraulic Seal Failure detected during final inspection. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0121,WO-05050,hydraulic_seal_failure,critical,2021-10-06,field_return,Hydraulic Seal Failure detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0122,WO-05099,stress_fracture,major,2023-09-17,final_inspection,Stress Fracture detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0123,WO-05106,coating_thickness,major,2023-05-06,field_return,Coating Thickness detected during field return,
+DEF-0124,WO-05112,premature_wear,critical,2021-10-17,final_inspection,Premature Wear detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0125,WO-05132,dimensional_variance,critical,2020-05-14,field_return,Dimensional Variance detected during field return,
+DEF-0126,WO-05152,hydraulic_seal_failure,major,2022-10-11,field_return,Hydraulic Seal Failure detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0127,WO-05153,premature_wear,major,2022-04-10,field_return,Premature Wear detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0128,WO-05161,premature_wear,major,2021-01-22,field_return,Premature Wear detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0129,WO-05173,hydraulic_seal_failure,major,2024-02-12,final_inspection,Hydraulic Seal Failure detected during final inspection. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0130,WO-05189,hardness_deviation,major,2021-02-17,final_inspection,Hardness Deviation detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0131,WO-05206,cylinder_scoring,critical,2022-01-14,field_return,Cylinder Scoring detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0132,WO-05257,hydraulic_seal_failure,critical,2020-07-04,field_return,Hydraulic Seal Failure detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0133,WO-05359,hydraulic_seal_failure,critical,2020-12-20,field_return,Hydraulic Seal Failure detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0134,WO-05388,material_fatigue,critical,2021-11-22,field_return,Material Fatigue detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0135,WO-05441,stress_fracture,critical,2021-01-01,field_return,Stress Fracture detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0136,WO-05479,cylinder_scoring,major,2023-11-16,final_inspection,Cylinder Scoring detected during final inspection. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0137,WO-05511,coating_adhesion,critical,2021-12-07,field_return,Coating Adhesion detected during field return,
+DEF-0138,WO-05542,stress_fracture,major,2023-05-21,field_return,Stress Fracture detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0139,WO-05548,hydraulic_seal_failure,major,2020-10-23,final_inspection,Hydraulic Seal Failure detected during final inspection. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0140,WO-05790,surface_finish,critical,2022-08-20,in_process,Surface Finish detected during in process,
+DEF-0141,WO-05881,hydraulic_seal_failure,critical,2023-01-22,field_return,Hydraulic Seal Failure detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0142,WO-06004,cylinder_scoring,major,2024-08-22,final_inspection,Cylinder Scoring detected during final inspection. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0143,WO-06052,stress_fracture,major,2023-12-25,field_return,Stress Fracture detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0144,WO-06117,cylinder_scoring,major,2022-11-24,field_return,Cylinder Scoring detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0145,WO-06158,premature_wear,major,2023-06-11,field_return,Premature Wear detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0146,WO-06164,cylinder_scoring,major,2021-11-26,final_inspection,Cylinder Scoring detected during final inspection. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0147,WO-06185,premature_wear,critical,2022-09-20,final_inspection,Premature Wear detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0148,WO-06190,hardness_deviation,critical,2020-03-07,final_inspection,Hardness Deviation detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0149,WO-06205,cylinder_scoring,major,2022-03-17,field_return,Cylinder Scoring detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0150,WO-06206,stress_fracture,critical,2022-11-05,final_inspection,Stress Fracture detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0151,WO-06248,surface_finish,critical,2021-09-02,field_return,Surface Finish detected during field return,
+DEF-0152,WO-06255,stress_fracture,critical,2022-08-03,field_return,Stress Fracture detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0153,WO-06295,cylinder_scoring,major,2023-09-02,field_return,Cylinder Scoring detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0154,WO-06354,surface_finish,minor,2024-04-10,field_return,Surface Finish detected during field return,
+DEF-0155,WO-06367,stress_fracture,major,2023-09-16,final_inspection,Stress Fracture detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0156,WO-06400,stress_fracture,major,2022-04-25,final_inspection,Stress Fracture detected during final inspection. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0157,WO-06401,surface_contamination,minor,2023-01-15,final_inspection,Surface Contamination detected during final inspection,
+DEF-0158,WO-06438,stress_fracture,critical,2024-07-04,field_return,Stress Fracture detected during field return. Possible heat treatment parameter deviation.,Heat Treatment Line 3 - HD-Series parameter mismatch
+DEF-0159,WO-06443,cylinder_scoring,major,2024-03-18,final_inspection,Cylinder Scoring detected during final inspection. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0160,WO-06454,cylinder_scoring,critical,2021-08-20,field_return,Cylinder Scoring detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0161,WO-06470,material_fatigue,critical,2022-10-29,field_return,Material Fatigue detected during field return. Potential material quality issue.,Vulcan Steel batch 2847
+DEF-0162,WO-06476,material_fatigue,critical,2023-10-10,field_return,Material Fatigue detected during field return. Potential material quality issue.,Vulcan Steel batch 2847

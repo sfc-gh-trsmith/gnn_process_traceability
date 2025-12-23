@@ -1,0 +1,16 @@
+SUPPLIER_ID,NAME,CATEGORY,LOCATION,QUALITY_RATING,CERTIFICATIONS,CREATED_AT
+SUP-001,Precision Hydraulics Inc,hydraulics,"Detroit, MI",4.5,"ISO 9001,AS9100,IATF 16949",2018-01-15T00:00:00
+SUP-002,Allied Fasteners Corp,fasteners,"Cleveland, OH",4.2,"ISO 9001,ISO 14001",2017-06-20T00:00:00
+SUP-003,Vulcan Steel Works,steel,"Pittsburgh, PA",3.8,ISO 9001,2016-03-10T00:00:00
+SUP-004,Global Electronics Ltd,electronics,"San Jose, CA",4.6,"ISO 9001,IPC-A-610,IATF 16949",2018-08-05T00:00:00
+SUP-005,Titan Steel Industries,steel,"Gary, IN",4.3,"ISO 9001,ISO 14001",2015-11-22T00:00:00
+SUP-006,Apex Rubber Products,seals,"Akron, OH",4.4,"ISO 9001,IATF 16949",2017-02-14T00:00:00
+SUP-007,Midwest Bearings Co,bearings,"Chicago, IL",4.1,ISO 9001,2016-07-30T00:00:00
+SUP-008,Superior Coatings Inc,coatings,"Indianapolis, IN",4.0,"ISO 9001,ISO 14001",2018-04-18T00:00:00
+SUP-009,Dynamic Seals International,seals,"Louisville, KY",4.7,"ISO 9001,AS9100",2017-09-12T00:00:00
+SUP-010,Northern Castings Ltd,castings,"Milwaukee, WI",3.9,ISO 9001,2016-01-25T00:00:00
+SUP-011,Pacific Wire & Cable,electrical,"Portland, OR",4.3,"ISO 9001,UL",2017-05-08T00:00:00
+SUP-012,Eastern Precision Tools,tooling,"Hartford, CT",4.5,"ISO 9001,ISO 17025",2018-02-28T00:00:00
+SUP-013,Central Hydraulic Systems,hydraulics,"Kansas City, MO",4.2,"ISO 9001,IATF 16949",2017-11-15T00:00:00
+SUP-014,Summit Alloys Corp,steel,"Birmingham, AL",4.4,"ISO 9001,ISO 14001,IATF 16949",2016-09-03T00:00:00
+SUP-015,Rockwell Sensors Inc,electronics,"Austin, TX",4.8,"ISO 9001,AS9100,IPC-A-610",2018-06-22T00:00:00

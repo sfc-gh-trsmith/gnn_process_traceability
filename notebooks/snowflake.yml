@@ -1,0 +1,15 @@
+definition_version: "2"
+entities:
+  gnn_process_traceability_notebook:
+    type: notebook
+    identifier:
+      name: GNN_PROCESS_TRACEABILITY_NOTEBOOK
+    main_file: gnn_traceability.ipynb
+    runtime_name: SYSTEM$BASIC_RUNTIME
+    compute_pool: GNN_PROCESS_TRACEABILITY_COMPUTE_POOL
+    query_warehouse: GNN_PROCESS_TRACEABILITY_WH
+    idle_auto_shutdown_time_seconds: 600
+    artifacts:
+      - gnn_traceability.ipynb
+      - environment.yml
+
