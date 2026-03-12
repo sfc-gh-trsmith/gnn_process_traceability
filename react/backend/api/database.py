@@ -34,8 +34,8 @@ def get_connection() -> Optional[snowflake.connector.SnowflakeConnection]:
                 _connection = None
         
         token = get_auth_token()
-        account = os.getenv('SNOWFLAKE_ACCOUNT', 'sfsenorthamerica-trsmith_aws1')
-        user = os.getenv('SNOWFLAKE_USER', 'trsmith')
+        account = os.getenv('SNOWFLAKE_ACCOUNT')
+        user = os.getenv('SNOWFLAKE_USER')
         
         database = os.getenv('SNOWFLAKE_DATABASE', 'GNN_PROCESS_TRACEABILITY')
         schema = os.getenv('SNOWFLAKE_SCHEMA', 'GNN_PROCESS_TRACEABILITY')
