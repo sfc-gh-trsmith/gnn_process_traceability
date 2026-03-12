@@ -5,8 +5,8 @@ entities:
     identifier:
       name: GNN_PROCESS_TRACEABILITY_NOTEBOOK
     main_file: gnn_traceability.ipynb
-    runtime_name: SYSTEM$BASIC_RUNTIME
-    compute_pool: GNN_PROCESS_TRACEABILITY_COMPUTE_POOL
+    runtime_name: SYSTEM$GPU_RUNTIME
+    compute_pool: GNN_PROCESS_TRACEABILITY_GPU_COMPUTE_POOL
     query_warehouse: GNN_PROCESS_TRACEABILITY_WH
     idle_auto_shutdown_time_seconds: 600
     artifacts:

@@ -7,5 +7,6 @@ dependencies:
   - scipy
   - matplotlib
   - seaborn
-  - networkx
+  - pytorch
+  - pytorch-cuda=12.1
 

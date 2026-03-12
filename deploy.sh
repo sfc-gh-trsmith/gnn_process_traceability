@@ -28,6 +28,8 @@ CONNECTION_NAME="demo"
 ENV_PREFIX=""
 ONLY_COMPONENT=""
 SKIP_NOTEBOOK=false
+SKIP_SEMANTIC_VIEWS=false
+SKIP_AGENT=false
 
 # Project settings
 PROJECT_PREFIX="GNN_PROCESS_TRACEABILITY"
@@ -64,7 +66,11 @@ Options:
   --only-data              Upload and load data only
   --only-notebook          Deploy notebook only
   --only-streamlit         Deploy Streamlit app only
+  --only-semantic-views    Deploy semantic views only
+  --only-agent             Deploy agent only
   --skip-notebook          Skip notebook deployment
+  --skip-semantic-views    Skip semantic views deployment
+  --skip-agent             Skip agent deployment
   -h, --help               Show this help message
 
 Examples:
@@ -95,6 +101,12 @@ should_run_step() {
             ;;
         streamlit)
             [[ "$step_name" == "streamlit" ]]
+            ;;
+        semantic_views)
+            [[ "$step_name" == "semantic_views" ]]
+            ;;
+        agent)
+            [[ "$step_name" == "agent" ]]
             ;;
         *)
             return 1
@@ -135,8 +147,24 @@ while [[ $# -gt 0 ]]; do
             ONLY_COMPONENT="streamlit"
             shift
             ;;
+        --only-semantic-views)
+            ONLY_COMPONENT="semantic_views"
+            shift
+            ;;
+        --only-agent)
+            ONLY_COMPONENT="agent"
+            shift
+            ;;
         --skip-notebook)
             SKIP_NOTEBOOK=true
+            shift
+            ;;
+        --skip-semantic-views)
+            SKIP_SEMANTIC_VIEWS=true
+            shift
+            ;;
+        --skip-agent)
+            SKIP_AGENT=true
             shift
             ;;
         *)
@@ -164,6 +192,7 @@ SCHEMA="${PROJECT_PREFIX}"
 ROLE="${FULL_PREFIX}_ROLE"
 WAREHOUSE="${FULL_PREFIX}_WH"
 COMPUTE_POOL="${FULL_PREFIX}_COMPUTE_POOL"
+GPU_COMPUTE_POOL="${FULL_PREFIX}_GPU_COMPUTE_POOL"
 NOTEBOOK_NAME="${FULL_PREFIX}_NOTEBOOK"
 APP_NAME="${FULL_PREFIX}_APP"
 
@@ -241,6 +270,9 @@ if should_run_step "account_sql"; then
         echo "SET PROJECT_ROLE = '${ROLE}';"
         echo "SET PROJECT_WH = '${WAREHOUSE}';"
         echo "SET PROJECT_COMPUTE_POOL = '${COMPUTE_POOL}';"
+        echo "SET PROJECT_GPU_COMPUTE_POOL = '${GPU_COMPUTE_POOL}';"
+        echo "SET PROJECT_PYPI_NETWORK_RULE = '${FULL_PREFIX}_PYPI_NETWORK_RULE';"
+        echo "SET PROJECT_EXTERNAL_ACCESS = '${FULL_PREFIX}_EXTERNAL_ACCESS';"
         echo "SET PROJECT_SCHEMA = '${SCHEMA}';"
         echo ""
         cat sql/01_account_setup.sql
@@ -388,11 +420,12 @@ if should_run_step "notebook" && [ "$SKIP_NOTEBOOK" = false ]; then
             CREATE OR REPLACE NOTEBOOK ${NOTEBOOK_NAME}
                 FROM '@MODELS_STAGE/notebooks/'
                 MAIN_FILE = 'gnn_traceability.ipynb'
-                RUNTIME_NAME = 'SYSTEM\$BASIC_RUNTIME'
-                COMPUTE_POOL = '${COMPUTE_POOL}'
+                RUNTIME_NAME = 'SYSTEM\$GPU_RUNTIME'
+                COMPUTE_POOL = '${GPU_COMPUTE_POOL}'
                 QUERY_WAREHOUSE = '${WAREHOUSE}'
                 IDLE_AUTO_SHUTDOWN_TIME_SECONDS = 600
-                COMMENT = 'GNN Process Traceability - Graph analysis notebook';
+                EXTERNAL_ACCESS_INTEGRATIONS = (${FULL_PREFIX}_EXTERNAL_ACCESS)
+                COMMENT = 'GNN Process Traceability - GPU-accelerated graph analysis notebook';
             
             -- Set live version for headless execution
             ALTER NOTEBOOK ${NOTEBOOK_NAME} ADD LIVE VERSION FROM LAST;
@@ -493,6 +526,85 @@ else
 fi
 
 ###############################################################################
+# Step 8: Deploy Semantic Views
+###############################################################################
+
+if should_run_step "semantic_views" && [ "$SKIP_SEMANTIC_VIEWS" = false ]; then
+    echo "Step 8: Deploying semantic views..."
+    echo "------------------------------------------------"
+    
+    if [ -d "semantic_models" ] && [ -n "$(ls -A semantic_models/*.sql 2>/dev/null)" ]; then
+        for sv_file in semantic_models/*.sql; do
+            sv_name=$(basename "$sv_file" .sql | tr '[:lower:]' '[:upper:]')
+            echo "  Deploying $sv_name..."
+            snow sql $SNOW_CONN -q "
+                USE ROLE ${ROLE};
+                USE DATABASE ${DATABASE};
+                USE SCHEMA ${SCHEMA};
+                USE WAREHOUSE ${WAREHOUSE};
+            " > /dev/null
+            
+            # Execute the semantic view DDL
+            {
+                echo "USE ROLE ${ROLE};"
+                echo "USE DATABASE ${DATABASE};"
+                echo "USE SCHEMA ${SCHEMA};"
+                echo "USE WAREHOUSE ${WAREHOUSE};"
+                cat "$sv_file"
+            } | snow sql $SNOW_CONN -i > /dev/null
+        done
+        
+        echo -e "${GREEN}[OK]${NC} Semantic views deployed"
+    else
+        echo -e "${YELLOW}[WARN]${NC} No semantic view files found in semantic_models/, skipping"
+    fi
+    echo ""
+elif [ "$SKIP_SEMANTIC_VIEWS" = true ]; then
+    echo "Step 8: Skipped (--skip-semantic-views)"
+    echo ""
+else
+    echo "Step 8: Skipped (--only-$ONLY_COMPONENT)"
+    echo ""
+fi
+
+###############################################################################
+# Step 9: Deploy Cortex Agent
+###############################################################################
+
+if should_run_step "agent" && [ "$SKIP_AGENT" = false ]; then
+    echo "Step 9: Deploying Cortex Agent..."
+    echo "------------------------------------------------"
+    
+    if [ -d "agents" ] && [ -n "$(ls -A agents/*.sql 2>/dev/null)" ]; then
+        for agent_file in agents/*.sql; do
+            agent_name=$(basename "$agent_file" .sql | tr '[:lower:]' '[:upper:]')
+            echo "  Deploying $agent_name..."
+            
+            # Substitute warehouse variable and execute agent DDL
+            {
+                echo "USE ROLE ${ROLE};"
+                echo "USE DATABASE ${DATABASE};"
+                echo "USE SCHEMA ${SCHEMA};"
+                echo "USE WAREHOUSE ${WAREHOUSE};"
+                # Replace ${WAREHOUSE} placeholder with actual warehouse name
+                sed "s/\${WAREHOUSE}/${WAREHOUSE}/g" "$agent_file"
+            } | snow sql $SNOW_CONN -i > /dev/null
+        done
+        
+        echo -e "${GREEN}[OK]${NC} Cortex Agent deployed"
+    else
+        echo -e "${YELLOW}[WARN]${NC} No agent files found in agents/, skipping"
+    fi
+    echo ""
+elif [ "$SKIP_AGENT" = true ]; then
+    echo "Step 9: Skipped (--skip-agent)"
+    echo ""
+else
+    echo "Step 9: Skipped (--only-$ONLY_COMPONENT)"
+    echo ""
+fi
+
+###############################################################################
 # Completion Summary
 ###############################################################################
 
@@ -511,12 +623,17 @@ else
     echo "  2. Open the Streamlit dashboard:"
     echo "     ./run.sh streamlit"
     echo ""
+    echo "  3. Chat with the Quality Engineer Agent in Snowsight"
+    echo ""
     echo "Resources Created:"
     echo "  - Database: $DATABASE"
     echo "  - Schema: $DATABASE.$SCHEMA"
     echo "  - Role: $ROLE"
     echo "  - Warehouse: $WAREHOUSE"
     echo "  - Compute Pool: $COMPUTE_POOL"
+    echo "  - Semantic Views: SM_DEFECT_ANALYSIS, SM_SUPPLIER_QUALITY, SM_STATION_PERFORMANCE,"
+    echo "                    SM_PROCESS_PARAMETERS, SM_ROOT_CAUSE_PATTERNS, SM_MATERIAL_GENEALOGY"
+    echo "  - Agent: QUALITY_ENGINEER_AGENT"
 fi
 echo ""
 
